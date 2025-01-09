@@ -1,10 +1,9 @@
 import pygame as pg
 import time
 
-funcionamiento = True
+funcionando = True
 estado = False
 color = [(220,220,0), (50,50,50)]
-
 pg.init()
 screen = pg.display.set_mode((500, 500), 0 , 32)
 tiempoinicial = time.process_time()*1000
@@ -16,21 +15,18 @@ while funcionando:
             break
     tiempoActual = time.process_time()*1000
     if (tiempoActual - tiempoinicial) > 200:
-    '''
-    if estado:
-        color = [220,220,0]
-        estado = False
-    else:   
-        color = [50,50,50]
-        estado = True
-    '''
-    tiempoinicial = time.process_time()*1000
-    estado = not(estado)
-    screen.fill([100, 100, 100])
-    pg.draw.circle(screen, color, (200, 200), 70)
-    pg.display.flip()
+        '''
+        if estado:
+            color = [220,220,0]
+            estado = False
+        else:   
+            color = [50,50,50]
+            estado = True
+        '''
+        tiempoinicial = time.process_time()*1000
+        estado = not(estado)
 
-    
-    time.sleep(1) 
-    
+    screen.fill([100, 100, 100])
+    pg.draw.circle(screen, color[estado], (200, 200), 70)
+    pg.display.flip()     
 pg.quit()

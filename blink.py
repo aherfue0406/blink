@@ -1,7 +1,7 @@
 import pygame as pg
 import time
 
-funcionamiento = True
+funcionando = True
 estado = False
 
 
