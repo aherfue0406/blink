@@ -11,7 +11,6 @@ screen = pg.display.set_mode((500, 500), 0 , 32)
 
 def blink(packet):
     global estado 
-    global t
     estado = not(estado)
 
 te = Timer(interval=1.0)
